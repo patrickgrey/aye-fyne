@@ -12,7 +12,7 @@
     "build:postcss": "cross-env NODE_ENV=production postcss course/**/*.css  --base course --dir course-publish",
     "build:js": "cross-env NODE_ENV=production rollup -c",
     "build:http-server": "http-server course-publish -c-1",
-    "build": "run-s clean build:eleventy build:postcss build:js build:http-server",
+    "build": "run-s clean build:eleventy build:postcss build:js",
     "debug": "DEBUG=* eleventy"
   },
   "repository": {
