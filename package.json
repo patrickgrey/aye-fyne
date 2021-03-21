@@ -9,7 +9,7 @@
     "develop:js": "rollup -c --watch",
     "dev": "cross-env NODE_ENV=development npm-run-all --sequential clean build:js --parallel develop:*",
     "build:eleventy": "cross-env ELEVENTY_PRODUCTION=true eleventy",
-    "build:postcss": "cross-env NODE_ENV=production postcss course/index.css  -d course-publish",
+    "build:postcss": "cross-env NODE_ENV=production postcss 'course/index.css'  -d 'course-publish'",
     "build:js": "cross-env NODE_ENV=production rollup -c",
     "build:http-server": "http-server course-publish -c-1",
     "build": "run-s clean build:eleventy build:postcss build:js",
